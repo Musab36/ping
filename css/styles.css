@@ -1,0 +1,29 @@
+h1 {
+  font-weight: bold;
+  text-align: center;
+  padding-top:45px;
+}
+h2 {
+margin: 10px;
+}
+.by {
+  color: brown;
+}
+.name {
+  color: white;
+}
+.usern {
+  color: blue;
+}
+.gtih {
+  color: brown;
+}
+.level {
+  color: brown;
+}
+.jva {
+  color: white;
+}
+.paro {
+  margin-left: 20px;
+}

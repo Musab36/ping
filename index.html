@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/af00e6516f.js"></script>
+    <title>Pingpong</title>
+  </head>
+  <script>
+    $(document).ready(function() {
+      $("#game").submit(function(event) {
+        $("ul").empty();
+        var number = parseInt($("#mynum").val());
+
+        for (x = 1; x <= number; x++)
+          if (x % 3 === 0 && x % 5 === 0) {
+            $("ul").append("<li>pingpong</li>");
+
+          } else if (x % 3 === 0) {
+          $("ul").append("<li>ping</li>");
+
+        } else if (x % 5 === 0) {
+          $("ul").append("<li>pong</li>");
+
+        } else {
+          $("ul").append("<li>" + x + "</li>");
+        }
+        event.preventDefault();
+      });
+    });
+
+  </script>
+
+  <body>
+    <div class="container-fluid">
+      <div class="ping" style="width:100%;height:150px;background-color:#DDB596;margin-bottom:30px;">
+        <h1>Ping-Pong</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="pong" style="width:300px;height:500px;background-color:#8AC58C;">
+            <h2>About Ping Pong</h2>
+            <p class="by">Created by:</p>
+            <p class="name">Musab Abdirahman</p>
+            <p class="gith">GitHub Username/URL:</p>
+            <p class="usern">Musab36</p>
+            <p class="level">Level 2 Test for:</p>
+            <p class="jva">Java</p>
+          </div>
+        </div>
+        <div class="col-md-4" style="margin-top:40px;">
+          <h3>Let's Play!</h3>
+          <h3>Rules:</h3>
+          <p>Ping Pong will count upto your number from 1 with following exceptions:</p>
+          <div class="paro">
+            <p>1.Numbers divisible by 3 become "ping"</p>
+            <p>2.Numbers divisible by 5 become "pong"</p>
+            <p>3.Numbers divisible by 3 and 5 become "pingpong"</p>
+            <form class="kak" id="game">
+              <div class="form-numbers">
+                <label for="mynum">Enter your number here:<input type="number" class="form-control" id="mynum"></label>
+                <button type="submit " class="btn ">Ping Pong</button>
+              </div>
+            </form>
+            <ul class="results ">
+            </ul>
+          </div>
+        </div>
+  </body>
+
+</html>
