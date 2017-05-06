@@ -4,37 +4,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://use.fontawesome.com/af00e6516f.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Pingpong</title>
   </head>
-  <script>
-    $(document).ready(function() {
-      $("#game").submit(function(event) {
-        $("ul").empty();
-        var number = parseInt($("#mynum").val());
-
-        for (x = 1; x <= number; x++)
-          if (x % 3 === 0 && x % 5 === 0) {
-            $("ul").append("<li>pingpong</li>");
-
-          } else if (x % 3 === 0) {
-          $("ul").append("<li>ping</li>");
-
-        } else if (x % 5 === 0) {
-          $("ul").append("<li>pong</li>");
-
-        } else {
-          $("ul").append("<li>" + x + "</li>");
-        }
-        event.preventDefault();
-      });
-    });
-
-  </script>
 
   <body>
     <div class="container-fluid">
@@ -54,7 +29,8 @@
             <p class="jva">Java</p>
           </div>
         </div>
-        <div class="col-md-4" style="margin-top:40px;">
+
+        <div class="col-md-8" style="margin-top:40px;">
           <h3>Let's Play!</h3>
           <h3>Rules:</h3>
           <p>Ping Pong will count upto your number from 1 with following exceptions:</p>
@@ -65,10 +41,10 @@
             <form class="kak" id="game">
               <div class="form-numbers">
                 <label for="mynum">Enter your number here:<input type="number" class="form-control" id="mynum"></label>
-                <button type="submit " class="btn ">Ping Pong</button>
+                <button type="submit" class="btn">Ping Pong</button>
               </div>
             </form>
-            <ul class="results ">
+            <ul class="results">
             </ul>
           </div>
         </div>
